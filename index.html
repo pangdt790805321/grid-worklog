@@ -3999,7 +3999,7 @@ var __async = (__this, __arguments, generator) => {
       var debugEnvRegex = /^$/;
       if (process$1.env.NODE_DEBUG) {
         var debugEnv = process$1.env.NODE_DEBUG;
-        debugEnv = debugEnv.replace(/[|\\{}()[\]^$+?.]/g, "\\<script src="libs/docx.umd.js"></script>").replace(/\*/g, ".*").replace(/,/g, "$|^").toUpperCase();
+        debugEnv = debugEnv.replace(/[|\\{}()[\]^$+?.]/g, "\\$&").replace(/\*/g, ".*").replace(/,/g, "$|^").toUpperCase();
         debugEnvRegex = new RegExp("^" + debugEnv + "$", "i");
       }
       exports3.debuglog = function(set) {
